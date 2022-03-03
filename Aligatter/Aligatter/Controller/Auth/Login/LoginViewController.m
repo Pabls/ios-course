@@ -25,22 +25,65 @@
 
 #pragma mark - UI configuration
 
-- (void) configureUi {
-    self.view.backgroundColor = [UIColor systemGreenColor];
-    [self.navigationController.navigationBar setHidden:YES];
-    [self configureLogo];
+- (void)configureUi {
+
+    [super setImage:[UIImage imageNamed:LOGO_IMG_NAME]];
+  
+    [self configureTextFieldsView];
 }
 
-- (void) configureLogo {
-    UIImage *image = [UIImage imageNamed: LOGO_IMG_NAME];
-    UIImageView *imageView = [[UIImageView alloc] initWithImage: image];
-    imageView.layer.backgroundColor = [UIColor whiteColor].CGColor;
-    imageView.layer.cornerRadius = imageView.frame.size.width / 2;
-    [self.view addSubview:imageView];
+- (void)configureTextFieldsView {
     
-    [imageView disableTranslatesAutoresizingMaskIntoConstraints];
-    [imageView addTopConstraint:self.view.safeAreaLayoutGuide.topAnchor withPadding:0];
-    [imageView addXCenterConstraint:self.view.centerXAnchor];
+    
+    //View 1
+    UIView *view1 = [[UIView alloc] init];
+    view1.backgroundColor = [UIColor blueColor];
+    [view1 addWidthConstraint:200];
+    [view1 addHeightConstraint:20];
+    
+    
+    //View 2
+    UIView *view2 = [[UIView alloc] init];
+    view2.backgroundColor = [UIColor greenColor];
+    [view2 addWidthConstraint:200];
+    [view2 addHeightConstraint:20];
+    
+    //View 3
+    UIView *view3 = [[UIView alloc] init];
+    view3.backgroundColor = [UIColor magentaColor];
+    [view3 addWidthConstraint:200];
+    [view3 addHeightConstraint:20];
+    
+    //Stack View
+    UIStackView *stackView = [[UIStackView alloc] init];
+    
+    stackView.axis = UILayoutConstraintAxisVertical;
+    stackView.distribution = UIStackViewDistributionEqualSpacing;
+    stackView.alignment = UIStackViewAlignmentCenter;
+    stackView.spacing = 8;
+    
+    
+    [stackView addArrangedSubview:view1];
+    [stackView addArrangedSubview:view2];
+    [stackView addArrangedSubview:view3];
+    
+   
+    
+    [self.view addSubview:stackView];
+    
+    [stackView disableTranslatesAutoresizingMaskIntoConstraints];
+    //Layout for Stack View
+    [stackView.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor].active = true;
+    [stackView.centerYAnchor constraintEqualToAnchor:self.view.centerYAnchor].active = true;
+}
+
+- (void) configureStackView {
+    UIStackView *stackView = [[UIStackView alloc] init];
+    
+    stackView.axis = UILayoutConstraintAxisVertical;
+    stackView.distribution = UIStackViewDistributionEqualSpacing;
+    stackView.alignment = UIStackViewAlignmentCenter;
+    stackView.spacing = 8;
 }
 
 @end

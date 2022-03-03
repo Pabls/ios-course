@@ -23,10 +23,10 @@
 
 #pragma mark - UI configuration
 
-- (void) configureUi {
+- (void)configureUi {
     self.view.backgroundColor = [UIColor whiteColor];
-    UIImage *image = [UIImage imageNamed: LOGO_IMG_NAME];
-    UIImageView *icon = [[UIImageView alloc] initWithImage: image];
+    UIImage *image = [UIImage imageNamed:LOGO_IMG_NAME];
+    UIImageView *icon = [[UIImageView alloc] initWithImage:image];
     icon.contentMode = UIViewContentModeScaleAspectFit;
     self.navigationItem.titleView = icon;
 }

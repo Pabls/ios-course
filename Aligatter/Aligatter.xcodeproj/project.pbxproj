@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0589020B27CFFDB70010FD2E /* BaseAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0589020A27CFFDB70010FD2E /* BaseAuthViewController.m */; };
 		05977B7227CA8B6900F8D2EC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 05977B7127CA8B6900F8D2EC /* AppDelegate.m */; };
 		05977B7527CA8B6900F8D2EC /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 05977B7427CA8B6900F8D2EC /* SceneDelegate.m */; };
 		05977B7B27CA8B6900F8D2EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05977B7927CA8B6900F8D2EC /* Main.storyboard */; };
@@ -26,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0589020927CFFDB70010FD2E /* BaseAuthViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseAuthViewController.h; sourceTree = "<group>"; };
+		0589020A27CFFDB70010FD2E /* BaseAuthViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseAuthViewController.m; sourceTree = "<group>"; };
 		05977B6D27CA8B6900F8D2EC /* Aligatter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aligatter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05977B7027CA8B6900F8D2EC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		05977B7127CA8B6900F8D2EC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -69,6 +72,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0589020C27CFFDC10010FD2E /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				0589020927CFFDB70010FD2E /* BaseAuthViewController.h */,
+				0589020A27CFFDB70010FD2E /* BaseAuthViewController.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		05977B6427CA8B6900F8D2EC = {
 			isa = PBXGroup;
 			children = (
@@ -217,6 +229,7 @@
 		05977BB427CBF0C200F8D2EC /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				0589020C27CFFDC10010FD2E /* Base */,
 				05977BB927CBF35300F8D2EC /* Login */,
 				05977BB827CBF34C00F8D2EC /* Registration */,
 			);
@@ -318,6 +331,7 @@
 				05977B9627CA969F00F8D2EC /* FeedViewController.m in Sources */,
 				05977B9127CA90D200F8D2EC /* MainTabBarViewController.m in Sources */,
 				05977B9E27CA973600F8D2EC /* NotificationsViewController.m in Sources */,
+				0589020B27CFFDB70010FD2E /* BaseAuthViewController.m in Sources */,
 				05977B8327CA8B6B00F8D2EC /* main.m in Sources */,
 				05977BB727CBF14200F8D2EC /* LoginViewController.m in Sources */,
 				05977BA227CA976D00F8D2EC /* ConversationsViewController.m in Sources */,

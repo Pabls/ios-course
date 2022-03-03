@@ -21,7 +21,7 @@
 
 #pragma mark - UI configuration
 
-- (void) configureUi {
+- (void)configureUi {
     self.navigationItem.title = EXPLORE_TITLE;
 }
 @end

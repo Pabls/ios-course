@@ -6,10 +6,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseAuthViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface LoginViewController : UIViewController
+@interface LoginViewController : BaseAuthViewController
 
 @end
 

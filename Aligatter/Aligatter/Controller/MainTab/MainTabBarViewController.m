@@ -37,7 +37,7 @@ CGFloat buttonSize = 56;
 
 #pragma mark - UI configuration
 
-- (void) configureControllers {
+- (void)configureControllers {
     FeedViewController *feedViewController = [[FeedViewController alloc] init];
     UINavigationController *feedNavigationController = [self getNavigationControllerWithImage:HOUSE_IMG_NAME andRootViewController:feedViewController];
     
@@ -59,21 +59,21 @@ CGFloat buttonSize = 56;
                             nil ];
 }
 
-- (UINavigationController *) getNavigationControllerWithImage:(NSString *) image andRootViewController:(UIViewController *) controller {
+- (UINavigationController *)getNavigationControllerWithImage:(NSString *) image andRootViewController:(UIViewController *) controller {
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:controller];
     navigationController.tabBarItem.image = [UIImage systemImageNamed:image];
     navigationController.navigationBar.tintColor = [UIColor whiteColor];
     return navigationController;
 }
 
-- (void) configureUi {
+- (void)configureUi {
     self.tabBar.tintColor = [UIColor systemGreenColor];
     [self configureButton];
     [self.view addSubview:self.actionButton];
     [self addConstraintsToButton];
 }
 
-- (void) configureButton {
+- (void)configureButton {
     self.actionButton = [UIButton buttonWithType:UIButtonTypeSystem];
     self.actionButton.backgroundColor = [UIColor systemGreenColor];
     self.actionButton.tintColor = [UIColor whiteColor];
@@ -82,7 +82,7 @@ CGFloat buttonSize = 56;
     [self.actionButton addTarget:self action:@selector(onActionButtonTap) forControlEvents:UIControlEventTouchUpInside];
 }
 
-- (void) addConstraintsToButton {
+- (void)addConstraintsToButton {
     [self.actionButton disableTranslatesAutoresizingMaskIntoConstraints];
     [self.actionButton addWidthConstraint:buttonSize];
     [self.actionButton addHeightConstraint:buttonSize];

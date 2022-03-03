@@ -21,7 +21,7 @@
 
 #pragma mark - UI configuration
 
-- (void) configureUi {
+- (void)configureUi {
     self.view.backgroundColor = [UIColor whiteColor];
     self.navigationItem.title = NOTIFICATIONS_TITLE;
 }

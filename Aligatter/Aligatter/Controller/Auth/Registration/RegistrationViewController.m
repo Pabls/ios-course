@@ -22,9 +22,8 @@
 
 #pragma mark - UI configuration
 
-- (void) configureUi {
-    self.view.backgroundColor = [UIColor systemGreenColor];
-    [self.navigationController.navigationBar setHidden:YES];
+- (void)configureUi {
+  
 }
 
 @end
