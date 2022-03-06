@@ -1,11 +1,13 @@
 //
 //  SceneDelegate.m
-//  WeekdayFinder
+//  Aligatter
 //
-//  Created by Павел Семин on 2/15/22.
+//  Created by Павел Семин on 2/26/22.
 //
 
 #import "SceneDelegate.h"
+#import "MainTabBarViewController.h"
+#import "LoginViewController.h"
 
 @interface SceneDelegate ()
 
@@ -15,9 +17,12 @@
 
 
 - (void)scene:(UIScene *)scene willConnectToSession:(UISceneSession *)session options:(UISceneConnectionOptions *)connectionOptions {
-    // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-    // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-    // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+    
+    self.window = [[UIWindow alloc] initWithWindowScene: (UIWindowScene *) scene];
+    //self.window.rootViewController = [[MainTabBarViewController alloc] init];
+    LoginViewController *loginViewController = [[LoginViewController alloc] init];
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:loginViewController];
+    [self.window makeKeyAndVisible];
 }
 
 
