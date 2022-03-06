@@ -23,6 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - Abstract methods to override
 - (void)buttonClicked;
+- (void)iconClicked;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -34,4 +34,8 @@
 - (void)buttonClicked {
     [self.navigationController popViewControllerAnimated:TRUE];
 }
+
+- (void)iconClicked {
+    NSLog(@"iconClicked");
+}
 @end

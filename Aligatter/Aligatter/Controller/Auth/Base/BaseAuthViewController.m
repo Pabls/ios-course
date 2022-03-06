@@ -121,6 +121,11 @@
     [self.logoImage disableTranslatesAutoresizingMaskIntoConstraints];
     [self.logoImage addTopConstraint:self.view.safeAreaLayoutGuide.topAnchor withPadding:16];
     [self.logoImage addXCenterConstraint:self.view.centerXAnchor];
+    
+    
+    UITapGestureRecognizer *rec = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(iconClicked)];
+    [self.logoImage addGestureRecognizer:rec];
+    self.logoImage.userInteractionEnabled = YES;
 }
 
 - (void)configureTextFieldsStackView {
@@ -158,6 +163,11 @@
 
 #pragma mark - Abstract methods
 - (void)buttonClicked {
+    // No Action
+    // Method for override
+}
+
+- (void)iconClicked {
     // No Action
     // Method for override
 }
