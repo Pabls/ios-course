@@ -6,6 +6,8 @@
 //
 
 #import "RegistrationViewController.h"
+#import "ImagesResources.h"
+#import "StringsResources.h"
 
 @interface RegistrationViewController ()
 
@@ -23,7 +25,13 @@
 #pragma mark - UI configuration
 
 - (void)configureUi {
-  
+    [super setImage:[UIImage imageNamed:PLUS_IMG_NAME]];
+    [super setDescription:ALREADY_HAVE_ACCOUNT andButtonText:LOG_IN];
 }
 
+#pragma mark - Listeners
+
+- (void)buttonClicked {
+    [self.navigationController popViewControllerAnimated:TRUE];
+}
 @end

@@ -18,6 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void) addWidthConstraint:(CGFloat) width;
 - (void) addHeightConstraint:(CGFloat) height;
 - (void) addXCenterConstraint:(NSLayoutXAxisAnchor *)anchor;
+- (void) addYCenterConstraint:(NSLayoutYAxisAnchor *)anchor;
 @end
 
 NS_ASSUME_NONNULL_END

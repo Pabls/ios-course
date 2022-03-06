@@ -7,6 +7,8 @@
 
 #import "LoginViewController.h"
 #import "ImagesResources.h"
+#import "StringsResources.h"
+#import "RegistrationViewController.h"
 
 #import "UIView+UIViewAddAnchor.h"
 
@@ -26,64 +28,46 @@
 #pragma mark - UI configuration
 
 - (void)configureUi {
-
     [super setImage:[UIImage imageNamed:LOGO_IMG_NAME]];
-  
-    [self configureTextFieldsView];
+    UIView *v1 = [self createTextFieldWithImage:ENVELOPE_IMG_NAME andHint:EMAIL];
+    UIView *v2 = [self createTextFieldWithImage:LOCK_IMG_NAME andHint:PASSWORD];
+    UIView *v3 = [[UIView alloc] init];
+    [super setTextFieldViews:[[NSArray alloc] initWithObjects:v1, v2, v3, nil]];
+    
+    [super setDescription:DONT_HAVE_ACCOUNT andButtonText:SIGN_UP];
 }
 
-- (void)configureTextFieldsView {
+- (UIView *)createTextFieldWithImage:(NSString *) imageName andHint:(NSString *) hint {
+    UIView *container = [[UIView alloc] init];
     
+    // icon
+    UIImage *image = [UIImage systemImageNamed:imageName];
+    UIImageView *icon = [[UIImageView alloc] initWithImage:image];
+    icon.contentMode = UIViewContentModeScaleAspectFit;
+    icon.tintColor = [UIColor whiteColor];
+
+    // textfiled
+    UITextField *textFileld = [[UITextField alloc] init];
+    textFileld.text = hint;
     
-    //View 1
-    UIView *view1 = [[UIView alloc] init];
-    view1.backgroundColor = [UIColor blueColor];
-    [view1 addWidthConstraint:200];
-    [view1 addHeightConstraint:20];
+    [container addSubview:icon];
+    [container addSubview:textFileld];
     
-    
-    //View 2
-    UIView *view2 = [[UIView alloc] init];
-    view2.backgroundColor = [UIColor greenColor];
-    [view2 addWidthConstraint:200];
-    [view2 addHeightConstraint:20];
-    
-    //View 3
-    UIView *view3 = [[UIView alloc] init];
-    view3.backgroundColor = [UIColor magentaColor];
-    [view3 addWidthConstraint:200];
-    [view3 addHeightConstraint:20];
-    
-    //Stack View
-    UIStackView *stackView = [[UIStackView alloc] init];
-    
-    stackView.axis = UILayoutConstraintAxisVertical;
-    stackView.distribution = UIStackViewDistributionEqualSpacing;
-    stackView.alignment = UIStackViewAlignmentCenter;
-    stackView.spacing = 8;
-    
-    
-    [stackView addArrangedSubview:view1];
-    [stackView addArrangedSubview:view2];
-    [stackView addArrangedSubview:view3];
-    
-   
-    
-    [self.view addSubview:stackView];
-    
-    [stackView disableTranslatesAutoresizingMaskIntoConstraints];
-    //Layout for Stack View
-    [stackView.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor].active = true;
-    [stackView.centerYAnchor constraintEqualToAnchor:self.view.centerYAnchor].active = true;
+    // icon layout
+    [icon disableTranslatesAutoresizingMaskIntoConstraints];
+    [icon addWidthConstraint:24];
+    [icon addHeightConstraint:24];
+    [icon addYCenterConstraint:container.centerYAnchor];
+    [icon addLeftConstraint:container.leftAnchor withPadding:8];
+
+    return container;
 }
 
-- (void) configureStackView {
-    UIStackView *stackView = [[UIStackView alloc] init];
-    
-    stackView.axis = UILayoutConstraintAxisVertical;
-    stackView.distribution = UIStackViewDistributionEqualSpacing;
-    stackView.alignment = UIStackViewAlignmentCenter;
-    stackView.spacing = 8;
+#pragma mark - Listeners
+
+- (void)buttonClicked {
+    RegistrationViewController *vc = [[RegistrationViewController alloc] init];
+    [self.navigationController showViewController:vc sender:nil];
 }
 
 @end

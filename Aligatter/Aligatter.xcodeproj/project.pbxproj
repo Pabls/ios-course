@@ -24,6 +24,7 @@
 		05977BB327CBD0C900F8D2EC /* ImagesResources.m in Sources */ = {isa = PBXBuildFile; fileRef = 05977BB227CBD0C900F8D2EC /* ImagesResources.m */; };
 		05977BB727CBF14200F8D2EC /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05977BB627CBF14200F8D2EC /* LoginViewController.m */; };
 		05977BBC27CBF37100F8D2EC /* RegistrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05977BBB27CBF37100F8D2EC /* RegistrationViewController.m */; };
+		05C654BD27D147A400DF0234 /* NSArray+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 05C654BC27D147A400DF0234 /* NSArray+Helper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,8 @@
 		05977BB627CBF14200F8D2EC /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		05977BBA27CBF37100F8D2EC /* RegistrationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegistrationViewController.h; sourceTree = "<group>"; };
 		05977BBB27CBF37100F8D2EC /* RegistrationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegistrationViewController.m; sourceTree = "<group>"; };
+		05C654BB27D147A400DF0234 /* NSArray+Helper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+Helper.h"; sourceTree = "<group>"; };
+		05C654BC27D147A400DF0234 /* NSArray+Helper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Helper.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +166,7 @@
 		05977B8E27CA8D1500F8D2EC /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				05C654B927D1474600DF0234 /* ViewExtensions */,
 				05977BAA27CBD04100F8D2EC /* Constants */,
 				05977BA327CAC09900F8D2EC /* UIView+UIViewAddAnchor.h */,
 				05977BA427CAC09900F8D2EC /* UIView+UIViewAddAnchor.m */,
@@ -254,6 +258,15 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		05C654B927D1474600DF0234 /* ViewExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				05C654BB27D147A400DF0234 /* NSArray+Helper.h */,
+				05C654BC27D147A400DF0234 /* NSArray+Helper.m */,
+			);
+			path = ViewExtensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -338,6 +351,7 @@
 				05977B9B27CA972600F8D2EC /* ExploreViewController.m in Sources */,
 				05977BBC27CBF37100F8D2EC /* RegistrationViewController.m in Sources */,
 				05977B7527CA8B6900F8D2EC /* SceneDelegate.m in Sources */,
+				05C654BD27D147A400DF0234 /* NSArray+Helper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

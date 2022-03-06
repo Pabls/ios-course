@@ -22,7 +22,6 @@ extern NSString * const USER_NAME;
 
 extern NSString * const PHOTO;
 
-
 extern NSString * const DONT_HAVE_ACCOUNT;
 extern NSString * const ALREADY_HAVE_ACCOUNT;
 

@@ -40,4 +40,7 @@
 - (void) addXCenterConstraint:(NSLayoutXAxisAnchor *)anchor {
     [self.centerXAnchor constraintEqualToAnchor:anchor].active = true;
 }
+- (void)addYCenterConstraint:(NSLayoutYAxisAnchor *)anchor {
+    [self.centerYAnchor constraintEqualToAnchor:anchor].active = YES;
+}
 @end
