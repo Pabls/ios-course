@@ -26,7 +26,7 @@
 
 - (void)configureUi {
     [super setImage:[UIImage imageNamed:PLUS_IMG_NAME]];
-    [super setDescription:ALREADY_HAVE_ACCOUNT andButtonText:LOG_IN];
+    [super setLinkDescription:ALREADY_HAVE_ACCOUNT andButtonText:LOG_IN];
 }
 
 #pragma mark - Listeners

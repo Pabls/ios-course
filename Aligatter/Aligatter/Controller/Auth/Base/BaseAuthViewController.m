@@ -41,7 +41,7 @@
     }
 }
 
-- (void)setDescription:(NSString *)description andButtonText:(NSString *)text {
+- (void)setLinkDescription:(NSString *)description andButtonText:(NSString *)text {
     UILabel *label = [[UILabel alloc]init];
     label.text = description;
     label.textColor = [UIColor whiteColor];
@@ -55,6 +55,51 @@
     [self.bottomLinkStackView  addArrangedSubview:button];
     
     [button addTarget:self action:@selector(buttonClicked) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (UIView *)createTextFieldWithImage:(NSString *) imageName andPlaceholder:(NSString *) placeholder {
+    UIView *container = [[UIView alloc] init];
+    
+    // icon
+    UIImage *image = [UIImage systemImageNamed:imageName];
+    UIImageView *icon = [[UIImageView alloc] initWithImage:image];
+    icon.contentMode = UIViewContentModeScaleAspectFit;
+    icon.tintColor = [UIColor whiteColor];
+
+    // textfiled
+    UITextField *textFileld = [[UITextField alloc] init];
+    textFileld.placeholder = placeholder;
+    textFileld.textColor = [UIColor whiteColor];
+    textFileld.tintColor = [UIColor whiteColor];
+    textFileld.attributedPlaceholder = [[NSAttributedString alloc] initWithString:placeholder attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
+    
+    // line
+    UIView *line = [[UIView alloc] init];
+    line.backgroundColor = [UIColor whiteColor];
+    
+    [container addSubview:icon];
+    [container addSubview:textFileld];
+    [container addSubview:line];
+    
+    // layout
+    [icon disableTranslatesAutoresizingMaskIntoConstraints];
+    [icon addWidthConstraint:24];
+    [icon addHeightConstraint:24];
+    [icon addYCenterConstraint:container.centerYAnchor];
+    [icon addLeftConstraint:container.leftAnchor withPadding:8];
+    
+    [textFileld disableTranslatesAutoresizingMaskIntoConstraints];
+    [textFileld addLeftConstraint:icon.rightAnchor withPadding:8];
+    [textFileld addRightConstraint:container.rightAnchor withPadding:-8];
+    [textFileld addYCenterConstraint:container.centerYAnchor];
+    
+    [line disableTranslatesAutoresizingMaskIntoConstraints];
+    [line addBottomConstraint:container.bottomAnchor withPadding:0];
+    [line addHeightConstraint:1];
+    [line addLeftConstraint:container.leftAnchor withPadding:0];
+    [line addRightConstraint:container.rightAnchor withPadding:0];
+    
+    return container;
 }
 
 #pragma mark - UI configuration private methods

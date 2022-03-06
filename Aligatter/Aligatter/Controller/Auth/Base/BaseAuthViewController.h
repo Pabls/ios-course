@@ -18,7 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)viewDidLoad;
 - (void)setImage: (UIImage *) image;
 - (void)setTextFieldViews: (NSArray<UIView *> *) views;
-- (void)setDescription: (NSString *) description andButtonText:(NSString *) text;
+- (void)setLinkDescription: (NSString *) description andButtonText:(NSString *) text;
+- (UIView *)createTextFieldWithImage:(NSString *) imageName andPlaceholder:(NSString *) placeholder;
 
 #pragma mark - Abstract methods to override
 - (void)buttonClicked;

@@ -29,38 +29,12 @@
 
 - (void)configureUi {
     [super setImage:[UIImage imageNamed:LOGO_IMG_NAME]];
-    UIView *v1 = [self createTextFieldWithImage:ENVELOPE_IMG_NAME andHint:EMAIL];
-    UIView *v2 = [self createTextFieldWithImage:LOCK_IMG_NAME andHint:PASSWORD];
-    UIView *v3 = [[UIView alloc] init];
-    [super setTextFieldViews:[[NSArray alloc] initWithObjects:v1, v2, v3, nil]];
+    UIView *emailInput = [super createTextFieldWithImage:ENVELOPE_IMG_NAME andPlaceholder:EMAIL];
+    UIView *passwordInput = [super createTextFieldWithImage:LOCK_IMG_NAME andPlaceholder:PASSWORD];
+   
+    [super setTextFieldViews:[[NSArray alloc] initWithObjects:emailInput, passwordInput, nil]];
     
-    [super setDescription:DONT_HAVE_ACCOUNT andButtonText:SIGN_UP];
-}
-
-- (UIView *)createTextFieldWithImage:(NSString *) imageName andHint:(NSString *) hint {
-    UIView *container = [[UIView alloc] init];
-    
-    // icon
-    UIImage *image = [UIImage systemImageNamed:imageName];
-    UIImageView *icon = [[UIImageView alloc] initWithImage:image];
-    icon.contentMode = UIViewContentModeScaleAspectFit;
-    icon.tintColor = [UIColor whiteColor];
-
-    // textfiled
-    UITextField *textFileld = [[UITextField alloc] init];
-    textFileld.text = hint;
-    
-    [container addSubview:icon];
-    [container addSubview:textFileld];
-    
-    // icon layout
-    [icon disableTranslatesAutoresizingMaskIntoConstraints];
-    [icon addWidthConstraint:24];
-    [icon addHeightConstraint:24];
-    [icon addYCenterConstraint:container.centerYAnchor];
-    [icon addLeftConstraint:container.leftAnchor withPadding:8];
-
-    return container;
+    [super setLinkDescription:DONT_HAVE_ACCOUNT andButtonText:SIGN_UP];
 }
 
 #pragma mark - Listeners
