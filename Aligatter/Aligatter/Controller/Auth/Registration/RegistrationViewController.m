@@ -31,7 +31,7 @@
 
 #pragma mark - Listeners
 
-- (void)buttonClicked {
+- (void)bottomButtonClick {
     [self.navigationController popViewControllerAnimated:TRUE];
 }
 

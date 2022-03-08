@@ -54,10 +54,10 @@
     [self.bottomLinkStackView  addArrangedSubview:label];
     [self.bottomLinkStackView  addArrangedSubview:button];
     
-    [button addTarget:self action:@selector(buttonClicked) forControlEvents:UIControlEventTouchUpInside];
+    [button addTarget:self action:@selector(bottomButtonClick) forControlEvents:UIControlEventTouchUpInside];
 }
 
-- (UIView *)createTextFieldWithImage:(NSString *) imageName andPlaceholder:(NSString *) placeholder {
+- (UIView *)createTextFieldWithImage:(NSString *) imageName andPlaceholder:(NSString *) placeholder andSetSecurityText:(BOOL) isSecureTextEntry {
     UIView *container = [[UIView alloc] init];
     
     // icon
@@ -65,13 +65,15 @@
     UIImageView *icon = [[UIImageView alloc] initWithImage:image];
     icon.contentMode = UIViewContentModeScaleAspectFit;
     icon.tintColor = [UIColor whiteColor];
-
+    
     // textfiled
     UITextField *textFileld = [[UITextField alloc] init];
     textFileld.placeholder = placeholder;
     textFileld.textColor = [UIColor whiteColor];
     textFileld.tintColor = [UIColor whiteColor];
     textFileld.attributedPlaceholder = [[NSAttributedString alloc] initWithString:placeholder attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
+    
+    [textFileld setSecureTextEntry:isSecureTextEntry];
     
     // line
     UIView *line = [[UIView alloc] init];
@@ -100,6 +102,15 @@
     [line addRightConstraint:container.rightAnchor withPadding:0];
     
     return container;
+}
+
+- (UIButton *)createActionButtonWithTitle:(NSString *)title {
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeSystem];
+    [btn setTitle:title forState:UIControlStateNormal];
+    btn.backgroundColor = [UIColor whiteColor];
+    btn.tintColor = [UIColor systemGreenColor];
+    btn.layer.cornerRadius = 16;
+    return btn;
 }
 
 #pragma mark - UI configuration private methods
@@ -162,7 +173,12 @@
 }
 
 #pragma mark - Abstract methods
-- (void)buttonClicked {
+- (void)actionButtonClick {
+    // No Action
+    // Method for override
+}
+
+- (void)bottomButtonClick {
     // No Action
     // Method for override
 }
