@@ -20,5 +20,6 @@ NSString * const HEART_IMG_NAME = @"heart";
 NSString * const ENVELOPE_IMG_NAME = @"envelope";
 NSString * const TEXT_BADGE_IMG_NAME = @"text.badge.plus";
 NSString * const LOCK_IMG_NAME = @"lock";
+NSString * const PERSON_IMG_NAME = @"person";
 
 @end

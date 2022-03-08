@@ -110,6 +110,8 @@
     btn.backgroundColor = [UIColor whiteColor];
     btn.tintColor = [UIColor systemGreenColor];
     btn.layer.cornerRadius = 16;
+    
+    [btn addTarget:self action:@selector(actionButtonClick) forControlEvents:UIControlEventTouchUpInside];
     return btn;
 }
 

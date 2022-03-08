@@ -41,6 +41,10 @@
 
 #pragma mark - Listeners
 
+- (void)actionButtonClick {
+    NSLog(@"login actionButtonClick");
+}
+
 - (void)bottomButtonClick {
     RegistrationViewController *vc = [[RegistrationViewController alloc] init];
     [self.navigationController showViewController:vc sender:nil];

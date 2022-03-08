@@ -26,10 +26,24 @@
 
 - (void)configureUi {
     [super setImage:[UIImage imageNamed:PLUS_IMG_NAME]];
+    
+    UIView *emailInput = [super createTextFieldWithImage:ENVELOPE_IMG_NAME andPlaceholder:EMAIL andSetSecurityText:NO];
+    UIView *passwordInput = [super createTextFieldWithImage:LOCK_IMG_NAME andPlaceholder:PASSWORD andSetSecurityText:YES];
+    UIView *fullNameInput = [super createTextFieldWithImage:PERSON_IMG_NAME andPlaceholder:FULL_NAME andSetSecurityText:NO];
+    UIView *userNameInput = [super createTextFieldWithImage:PERSON_IMG_NAME andPlaceholder:USER_NAME andSetSecurityText:YES];
+    
+    UIButton *signUpButton = [super createActionButtonWithTitle:SIGN_UP];
+   
+    [super setTextFieldViews:[[NSArray alloc] initWithObjects:emailInput, passwordInput, fullNameInput, userNameInput, signUpButton, nil]];
+    
     [super setLinkDescription:ALREADY_HAVE_ACCOUNT andButtonText:LOG_IN];
 }
 
 #pragma mark - Listeners
+
+- (void)actionButtonClick {
+    NSLog(@"registration actionButtonClick");
+}
 
 - (void)bottomButtonClick {
     [self.navigationController popViewControllerAnimated:TRUE];
