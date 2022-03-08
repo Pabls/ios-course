@@ -47,7 +47,7 @@
 
 - (void)bottomButtonClick {
     RegistrationViewController *vc = [[RegistrationViewController alloc] init];
-    [self.navigationController showViewController:vc sender:nil];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

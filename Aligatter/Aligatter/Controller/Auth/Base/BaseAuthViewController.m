@@ -34,10 +34,11 @@
     }
     
     for (UIView *view in views) {
-        [view disableTranslatesAutoresizingMaskIntoConstraints];
-        [view addWidthConstraint:self.view.frame.size.width];
-        [view addHeightConstraint:50];
         [self.textFiledsStackView  addArrangedSubview:view];
+        [view disableTranslatesAutoresizingMaskIntoConstraints];
+        [view addLeftConstraint:self.textFiledsStackView.leftAnchor withPadding:0];
+        [view addRightConstraint:self.textFiledsStackView.rightAnchor withPadding:0];
+        [view addHeightConstraint:50];
     }
 }
 
