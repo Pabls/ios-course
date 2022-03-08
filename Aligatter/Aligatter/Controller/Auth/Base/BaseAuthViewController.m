@@ -15,6 +15,8 @@
 
 @implementation BaseAuthViewController
 
+int avatarSize = 120;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self configureUI];
@@ -22,10 +24,6 @@
 
 - (void)setImage: (UIImage *) image {
     [self.logoImage setImage:image];
-    
-    self.logoImage.contentMode = UIViewContentModeScaleAspectFit;
-    self.logoImage.frame = CGRectMake(0, 0, image.size.width, image.size.height);
-    self.logoImage.layer.cornerRadius = image.size.width / 2;
 }
 
 - (void)setTextFieldViews:(NSArray<UIView *> *)views {
@@ -130,12 +128,17 @@
 - (void)configureLogo {
     self.logoImage = [[UIImageView alloc] init];
     self.logoImage.layer.backgroundColor = [UIColor whiteColor].CGColor;
+    self.logoImage.contentMode = UIViewContentModeScaleToFill;
+    self.logoImage.layer.cornerRadius = avatarSize / 2;
+    self.logoImage.clipsToBounds = YES;
     [self.view addSubview:self.logoImage];
+    
     
     [self.logoImage disableTranslatesAutoresizingMaskIntoConstraints];
     [self.logoImage addTopConstraint:self.view.safeAreaLayoutGuide.topAnchor withPadding:16];
     [self.logoImage addXCenterConstraint:self.view.centerXAnchor];
-    
+    [self.logoImage addWidthConstraint:avatarSize];
+    [self.logoImage addHeightConstraint:avatarSize];
     
     UITapGestureRecognizer *rec = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(iconClicked)];
     [self.logoImage addGestureRecognizer:rec];
