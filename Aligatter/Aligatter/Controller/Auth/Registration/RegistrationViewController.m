@@ -32,7 +32,7 @@
     UIView *emailInput = [super createTextFieldWithImage:ENVELOPE_IMG_NAME andPlaceholder:EMAIL andSetSecurityText:NO];
     UIView *passwordInput = [super createTextFieldWithImage:LOCK_IMG_NAME andPlaceholder:PASSWORD andSetSecurityText:YES];
     UIView *fullNameInput = [super createTextFieldWithImage:PERSON_IMG_NAME andPlaceholder:FULL_NAME andSetSecurityText:NO];
-    UIView *userNameInput = [super createTextFieldWithImage:PERSON_IMG_NAME andPlaceholder:USER_NAME andSetSecurityText:YES];
+    UIView *userNameInput = [super createTextFieldWithImage:PERSON_IMG_NAME andPlaceholder:USER_NAME andSetSecurityText:NO];
     
     UIButton *signUpButton = [super createActionButtonWithTitle:SIGN_UP];
     

@@ -26,6 +26,7 @@
 		05977BB727CBF14200F8D2EC /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05977BB627CBF14200F8D2EC /* LoginViewController.m */; };
 		05977BBC27CBF37100F8D2EC /* RegistrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05977BBB27CBF37100F8D2EC /* RegistrationViewController.m */; };
 		05C654BD27D147A400DF0234 /* NSArray+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 05C654BC27D147A400DF0234 /* NSArray+Helper.m */; };
+		712EF4106F6A7913D7AA4A34 /* Pods_Aligatter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B08714C40A51FF2A985F3BA /* Pods_Aligatter.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,9 @@
 		05977BBB27CBF37100F8D2EC /* RegistrationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegistrationViewController.m; sourceTree = "<group>"; };
 		05C654BB27D147A400DF0234 /* NSArray+Helper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+Helper.h"; sourceTree = "<group>"; };
 		05C654BC27D147A400DF0234 /* NSArray+Helper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Helper.m"; sourceTree = "<group>"; };
+		1B08714C40A51FF2A985F3BA /* Pods_Aligatter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Aligatter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E605423B38B211267D06004 /* Pods-Aligatter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aligatter.release.xcconfig"; path = "Target Support Files/Pods-Aligatter/Pods-Aligatter.release.xcconfig"; sourceTree = "<group>"; };
+		F3D880B0128D228C54E28EC7 /* Pods-Aligatter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aligatter.debug.xcconfig"; path = "Target Support Files/Pods-Aligatter/Pods-Aligatter.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				712EF4106F6A7913D7AA4A34 /* Pods_Aligatter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,9 +94,10 @@
 		05977B6427CA8B6900F8D2EC = {
 			isa = PBXGroup;
 			children = (
-				0519385527D9D9FF007DC25F /* GoogleService-Info.plist */,
 				05977B6F27CA8B6900F8D2EC /* Aligatter */,
 				05977B6E27CA8B6900F8D2EC /* Products */,
+				740448F931D8D6A54398B382 /* Pods */,
+				515411376F07F0FA6F11960A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,6 +125,7 @@
 				05977B7927CA8B6900F8D2EC /* Main.storyboard */,
 				05977B7C27CA8B6B00F8D2EC /* Assets.xcassets */,
 				05977B7E27CA8B6B00F8D2EC /* LaunchScreen.storyboard */,
+				0519385527D9D9FF007DC25F /* GoogleService-Info.plist */,
 				05977B8127CA8B6B00F8D2EC /* Info.plist */,
 				05977B8227CA8B6B00F8D2EC /* main.m */,
 			);
@@ -270,6 +277,24 @@
 			path = ViewExtensions;
 			sourceTree = "<group>";
 		};
+		515411376F07F0FA6F11960A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1B08714C40A51FF2A985F3BA /* Pods_Aligatter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		740448F931D8D6A54398B382 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F3D880B0128D228C54E28EC7 /* Pods-Aligatter.debug.xcconfig */,
+				4E605423B38B211267D06004 /* Pods-Aligatter.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -277,9 +302,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 05977B8627CA8B6B00F8D2EC /* Build configuration list for PBXNativeTarget "Aligatter" */;
 			buildPhases = (
+				F3FEA0A840D08E9F337ECC9E /* [CP] Check Pods Manifest.lock */,
 				05977B6927CA8B6900F8D2EC /* Sources */,
 				05977B6A27CA8B6900F8D2EC /* Frameworks */,
 				05977B6B27CA8B6900F8D2EC /* Resources */,
+				0B949316E87DC08FB4FD8576 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -335,6 +362,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0B949316E87DC08FB4FD8576 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Aligatter/Pods-Aligatter-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Aligatter/Pods-Aligatter-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Aligatter/Pods-Aligatter-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F3FEA0A840D08E9F337ECC9E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Aligatter-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		05977B6927CA8B6900F8D2EC /* Sources */ = {
@@ -495,6 +564,7 @@
 		};
 		05977B8727CA8B6B00F8D2EC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3D880B0128D228C54E28EC7 /* Pods-Aligatter.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -523,6 +593,7 @@
 		};
 		05977B8827CA8B6B00F8D2EC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E605423B38B211267D06004 /* Pods-Aligatter.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
