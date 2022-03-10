@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0519385627D9D9FF007DC25F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0519385527D9D9FF007DC25F /* GoogleService-Info.plist */; };
 		0589020B27CFFDB70010FD2E /* BaseAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0589020A27CFFDB70010FD2E /* BaseAuthViewController.m */; };
 		05977B7227CA8B6900F8D2EC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 05977B7127CA8B6900F8D2EC /* AppDelegate.m */; };
 		05977B7527CA8B6900F8D2EC /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 05977B7427CA8B6900F8D2EC /* SceneDelegate.m */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0519385527D9D9FF007DC25F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0589020927CFFDB70010FD2E /* BaseAuthViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseAuthViewController.h; sourceTree = "<group>"; };
 		0589020A27CFFDB70010FD2E /* BaseAuthViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseAuthViewController.m; sourceTree = "<group>"; };
 		05977B6D27CA8B6900F8D2EC /* Aligatter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aligatter.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,6 +89,7 @@
 		05977B6427CA8B6900F8D2EC = {
 			isa = PBXGroup;
 			children = (
+				0519385527D9D9FF007DC25F /* GoogleService-Info.plist */,
 				05977B6F27CA8B6900F8D2EC /* Aligatter */,
 				05977B6E27CA8B6900F8D2EC /* Products */,
 			);
@@ -325,6 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				05977B8027CA8B6B00F8D2EC /* LaunchScreen.storyboard in Resources */,
+				0519385627D9D9FF007DC25F /* GoogleService-Info.plist in Resources */,
 				05977B7D27CA8B6B00F8D2EC /* Assets.xcassets in Resources */,
 				05977B7B27CA8B6900F8D2EC /* Main.storyboard in Resources */,
 			);
